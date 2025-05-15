@@ -1,21 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package exercicio07;
 
-/**
- *
- * @author aluno.saolucas
- */
-public class Exercicio07 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
         // TODO code application logic here
+   import javax.swing.JOptionPane;
+
+public class Exercicio7 {
+    public static int mdc(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
-    
+
+    public static void main(String[] args) {
+        int a = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número:"));
+        int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número:"));
+        JOptionPane.showMessageDialog(null, "MDC: " + mdc(a, b));
+    }
 }
+ 
+    
+
